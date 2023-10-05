@@ -1,4 +1,4 @@
-# Symfony demo app for New Relic
+# Symfony demo app for New Relic & CommerceTools
 
 This Demo is to show how PHP CommerceTools SDK can be used in a Symfony application in a Docker environment with NewRelic monitoring enabled.
 
