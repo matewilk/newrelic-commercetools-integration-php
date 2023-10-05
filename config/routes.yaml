@@ -1,0 +1,34 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+get_categories:
+    path: /categories
+    methods: GET
+    controller: 'App\Controller\CategoryController::getCategories'
+
+get_products:
+    path: /products
+    methods: GET
+    defaults:
+        _controller: 'App\Controller\ProductController::getProducts'
+
+get_inventory:
+    path: /inventory
+    methods: GET
+    defaults:
+        _controller: 'App\Controller\InventoryController::getInventory'
+
+get_orders:
+    path: /orders
+    methods: GET
+    defaults:
+        _controller: 'App\Controller\OrdersController::getOrders'
+
+health_check:
+    path: /
+    methods: GET
+    defaults:
+        _controller: 'App\Controller\HealthCheckController::index'

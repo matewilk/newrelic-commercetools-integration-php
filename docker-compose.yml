@@ -1,0 +1,42 @@
+version: "3.4"
+
+
+services:
+  application:
+    # platform: linux/amd64
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+      args:
+        NEWRELIC_KEY: ${NEWRELIC_KEY}
+        NEWRELIC_APP_NAME: ${NEWRELIC_APP_NAME}
+    tty: true
+    ports:
+      - 9000:9000
+    volumes:
+      - .:/var/www/symfony
+      - ./var/logs/newrelic:/var/log/newrelic
+  nginx:
+    build:
+      context: docker/nginx
+      dockerfile: Dockerfile
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s -o /dev/null -w '%{http_code}' http://localhost:80/ | grep -q '200' || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    ports:
+      - 8080:80
+    links:
+      - application
+    volumes:
+      - ./var/logs/nginx:/var/log/nginx
+      - .:/var/www/symfony
+  # test:
+  #   build:
+  #     context: .
+  #     dockerfile: docker/test/Dockerfile
+  #   command: ["./test_script.sh"]
+  #   depends_on:
+  #     nginx:
+  #       condition: service_healthy
