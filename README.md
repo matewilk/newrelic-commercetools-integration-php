@@ -1,6 +1,8 @@
-# Symfony demo app for New Relic & CommerceTools
+<a href="https://opensource.newrelic.com/oss-category/#new-relic-experimental"><picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/newrelic/opensource-website/raw/main/src/images/categories/dark/Experimental.png"><source media="(prefers-color-scheme: light)" srcset="https://github.com/newrelic/opensource-website/raw/main/src/images/categories/Experimental.png"><img alt="New Relic Open Source experimental project banner." src="https://github.com/newrelic/opensource-website/raw/main/src/images/categories/Experimental.png"></picture></a>
 
-This Demo is to show how PHP CommerceTools SDK can be used in a Symfony application in a Docker environment with NewRelic monitoring enabled.
+# New Relic CommerceTools Integration PHP
+
+This Demo is to show how PHP CommerceTools SDK can be used in a PHP (Symfony) application (in a Docker environment) with NewRelic monitoring enabled.
 
 ## Requirements
 
@@ -109,3 +111,21 @@ This will run the `test_script.sh` script in the `test` container. The script wi
 <img width="1883" alt="Screenshot 2023-10-05 at 15 10 21" src="https://github.com/matewilk/newrelic-commercetools-php-integration/assets/6328360/ee0d021b-1eab-4d92-9ba7-643b37c43a38">
 <img width="1893" alt="Screenshot 2023-10-05 at 15 11 48" src="https://github.com/matewilk/newrelic-commercetools-php-integration/assets/6328360/431db20e-151c-48c1-a11b-a97551f2c742">
 <img width="1875" alt="Screenshot 2023-10-05 at 15 12 34" src="https://github.com/matewilk/newrelic-commercetools-php-integration/assets/6328360/5ad45841-132b-4d21-8295-3a46a3abc846">
+
+## Support
+
+New Relic hosts and moderates an online forum where customers can interact with New Relic employees as well as other customers to get help and share best practices.
+
+## Contributing
+We encourage your contributions to improve [project name]! Keep in mind when you submit your pull request, you'll need to sign the CLA via the click-through using CLA-Assistant. You only have to sign the CLA one time per project.
+If you have any questions, or to execute our corporate CLA, required if your contribution is on behalf of a company,  please drop us an email at opensource@newrelic.com.
+
+**A note about vulnerabilities**
+
+As noted in our [security policy](./SECURITY.md), New Relic is committed to the privacy and security of our customers and their data. We believe that providing coordinated disclosure by security researchers and engaging with the security community are important means to achieve our security goals.
+
+If you believe you have found a security vulnerability in this project or any of New Relic's products or websites, we welcome and greatly appreciate you reporting it to New Relic through [HackerOne](https://hackerone.com/newrelic).
+
+## License
+New Relic CommerceTools Integration PHP is licensed under the [Apache 2.0](http://apache.org/licenses/LICENSE-2.0.txt) License.
+>[If applicable: The [project name] also uses source code from third-party libraries. You can find full details on which libraries are used and the terms under which they are licensed in the third-party notices document.]
